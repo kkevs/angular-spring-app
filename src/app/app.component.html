@@ -1,0 +1,19 @@
+<button (click)="navigateRoute()"><img src="../assets/img/logo.jpg"/></button>
+<h1>App Component</h1>
+<div>
+  <router-outlet></router-outlet>
+  <a routerLink="/users" (click)="showButton = !showButton" [hidden]="showButton">
+    <button class="btn btn-success pull-right"> List
+      Users
+    </button>
+  </a>
+  <a routerLink="/addUsers" (click)="showButton2 = !showButton2" [hidden]="showButton2">
+    <button class="btn btn-success pull-left">
+      Create Users
+    </button>
+  </a>
+
+  <button class="btn btn-success pull-left" (click)="back()">
+    turn back
+  </button>
+</div>

@@ -1,0 +1,24 @@
+<div class="col-md-6">
+  <h2> User List</h2>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>FirstName</th>
+      <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of datas">
+      <td>{{data.name}}</td>
+      <td>{{data.email | uppercase}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteUser(data.id)"> Delete User</button>
+      </td>
+      <td>
+        <button class="btn btn-submit" (click)="getUser(data.id)"> Get User</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
